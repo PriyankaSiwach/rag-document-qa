@@ -1,0 +1,11 @@
+Anthropic is an AI safety company founded in 2021 by Dario Amodei, Daniela Amodei, and other former OpenAI researchers. The company focuses on AI safety research and developing AI systems that are safe, beneficial, and understandable.
+
+Claude is Anthropic's AI assistant. Claude is designed to be helpful, harmless, and honest. Claude can help with writing, analysis, coding, math, and many other tasks.
+
+The Anthropic Fellows Program is a research fellowship for people interested in AI safety. Fellows work on technical AI safety research including alignment, interpretability, and robustness. The program accepts people from various backgrounds including computer science, mathematics, and other technical fields.
+
+RAG stands for Retrieval Augmented Generation. It is a technique where an AI system retrieves relevant information from a document before generating an answer. This allows the AI to answer questions about specific documents it was not trained on.
+
+LangChain is a framework for building applications with large language models. It provides tools for document loading, text splitting, embeddings, vector stores, and chains that connect everything together.
+
+Pinecone is a vector database that stores embeddings. Embeddings are numerical representations of text that capture meaning. Similar texts have similar embeddings, which allows semantic search.
