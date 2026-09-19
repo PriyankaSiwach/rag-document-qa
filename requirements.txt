@@ -5,3 +5,7 @@ langchain-pinecone
 pinecone
 python-dotenv
 tiktoken
+fastapi
+uvicorn
+beautifulsoup4
+lxml

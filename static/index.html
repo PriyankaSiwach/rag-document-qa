@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RAG Document Q&A</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="atmosphere" aria-hidden="true"></div>
+
+    <main class="shell">
+      <header class="brand">
+        <p class="brand-mark">RAG Document Q&A</p>
+        <p class="brand-line">Ask anything about the text you load — answers stay grounded in your source.</p>
+      </header>
+
+      <section class="workspace">
+        <aside class="panel source-panel">
+          <div class="panel-head">
+            <h2>Source</h2>
+            <p>Paste a paragraph, or load a page from a link.</p>
+          </div>
+
+          <div class="mode-toggle" role="tablist" aria-label="Source type">
+            <button class="mode-btn is-active" data-mode="text" type="button">Paragraph</button>
+            <button class="mode-btn" data-mode="url" type="button">Link</button>
+          </div>
+
+          <div id="text-mode" class="mode-pane">
+            <label class="field-label" for="source-text">Your paragraph</label>
+            <textarea
+              id="source-text"
+              placeholder="Paste the text you want the AI to read from…"
+              rows="14"
+            ></textarea>
+          </div>
+
+          <div id="url-mode" class="mode-pane is-hidden">
+            <label class="field-label" for="source-url">Page URL</label>
+            <input
+              id="source-url"
+              type="url"
+              placeholder="https://example.com/article"
+            />
+          </div>
+
+          <button id="load-btn" class="primary-btn" type="button">Load into AI</button>
+          <p id="source-status" class="status" aria-live="polite"></p>
+        </aside>
+
+        <section class="panel chat-panel">
+          <div class="panel-head">
+            <h2>Ask</h2>
+            <p>Same retrieval + GPT flow as the terminal — keep asking until you’re done.</p>
+          </div>
+
+          <div id="chat-log" class="chat-log" aria-live="polite">
+            <div class="empty-state">
+              Load a source on the left, then ask your first question here.
+            </div>
+          </div>
+
+          <form id="ask-form" class="ask-form">
+            <label class="field-label" for="question-input">Question</label>
+            <div class="ask-row">
+              <input
+                id="question-input"
+                type="text"
+                placeholder="What should I know from this text?"
+                autocomplete="off"
+                required
+              />
+              <button class="primary-btn ask-btn" type="submit">Ask</button>
+            </div>
+          </form>
+        </section>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
